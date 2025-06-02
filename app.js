@@ -142,3 +142,46 @@ fetch("https://ipapi.co/json/")
 function generateRandomId(length = 8) {
   return Math.random().toString(36).substr(2, length);
 }
+
+const ctx = document.getElementById("lineChart").getContext("2d");
+
+new Chart(ctx, {
+  type: "line",
+  data: {
+    labels: [0, 30, 60, 90, 120],
+    datasets: [
+      {
+        data: [10, 22, 15, 30, 25],
+        borderColor: "rgb(75, 192, 192)",
+        backgroundColor: "rgba(75, 192, 192, 0.2)",
+        tension: 0.4,
+      },
+      {
+        data: [14, 18, 23, 28, 20],
+        borderColor: "rgb(255, 99, 132)",
+        backgroundColor: "rgba(255, 99, 132, 0.2)",
+        tension: 0.4,
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { display: false },
+      title: { display: false },
+    },
+    scales: {
+      x: {
+        grid: { display: false },
+        ticks: {
+          color: "#333", // optional: customize X label color
+        },
+      },
+      y: {
+        display: false, // hides entire y-axis
+        grid: { display: false },
+        ticks: { display: false },
+      },
+    },
+  },
+});

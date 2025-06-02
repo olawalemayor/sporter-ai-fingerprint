@@ -4,6 +4,8 @@
 
 body {
   font-size: 12px;
+  background-color: rgb(230, 250, 230);
+  font-family: "Inter", sans-serif;
 }
 
 .bg-spotter {

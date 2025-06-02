@@ -16,15 +16,24 @@
     <script>
       hljs.highlightAll();
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="flex w-screen h-screen justify-center items-center">
+    <div
+      class="flex flex-col w-screen h-screen items-center overflow-y-scroll py-10 gap-10"
+    >
       <div
         class="modal-container w-[720px] h-[350px] p-2 bg-white rounded-lg shadow-lg border-2"
       >
@@ -55,11 +64,11 @@
           <div id="box1" class="w-full flex h-full w-full">
             <div class="w-2/5 p-3 font-mono leading-2 bg-gray-200">
               <span class="block mb-2">
-                Welcome to Fingerprint, Visitor <span class="userId"></span>!
+                Welcome to Spotty AI, Visitor <span class="userId"></span>!
               </span>
 
               <span class="block mb-2">
-                It’s great to have you here. This is visit number 4 using
+                It’s great to have you here. This is visit number 1 using
                 Chrome.
               </span>
 
@@ -86,7 +95,7 @@
               <div class="border-b flex border-l-4 border-l-[rgb(0,128,128)]">
                 <div class="border-r p-2 flex flex-col">
                   <span class="text-xs font-semibold uppercase opacity-60"
-                    >Your visit summary</span
+                    >visit summary</span
                   >
                   <span class="font-semibold">You visited 1 times</span>
                 </div>
@@ -175,6 +184,34 @@ spPromise
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="w-[600px] p-4 bg-white rounded-lg shadow-lg border-2">
+        <div class="mb-4">
+          <span class="bg-gray-100 rounded-lg p-1 border-2 opacity-60"
+            >Why Spotter AI</span
+          >
+        </div>
+
+        <span>
+          <h2 class="font-semibold text-3xl mb-2 max-w-[70%]">
+            YouTube’s smartest content
+            <span class="text-spotter">creation </span> assistant
+          </h2>
+
+          <span class="block mb-2 max-w-[60%] text-lg italic"
+            >Spotter AI helps creators consistently grow their channels with
+            smarter content decisions powered by data-driven insights.</span
+          >
+        </span>
+
+        <div>
+          <button class="py-2 px-5 bg-spotter text-white rounded-lg font-bold">
+            Learn More
+          </button>
+        </div>
+
+        <canvas id="lineChart" width="600" height="200"></canvas>
       </div>
     </div>
 
