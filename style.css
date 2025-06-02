@@ -1,0 +1,36 @@
+:root {
+  --primary: rgb(0, 128, 128);
+}
+
+body {
+  font-size: 12px;
+}
+
+.bg-spotter {
+  background-color: var(--primary);
+}
+
+.text-spotter {
+  color: var(--primary);
+}
+
+.border-spotter {
+  border-color: var(--primary);
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+#map {
+  height: 100px;
+  width: 50%;
+}
+
+.userId {
+  color: var(--primary);
+}
